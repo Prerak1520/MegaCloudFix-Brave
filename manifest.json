@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "MegaCloudFix",
+  "version": "1.0",
+  "description": "Redirects megacloud.blog requests to megacloud.tv",
+  "permissions": [
+    "declarativeNetRequest",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.megacloud.blog/*",
+    "*://*.aniwatchtv.to/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.aniwatchtv.to/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
