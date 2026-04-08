@@ -43,4 +43,6 @@ This extension uses Manifest V3 and works on any Chromium-based browser:
 | Edge | `edge://extensions/` |
 | Opera | `opera://extensions/` |
 
+Based on MegaCloudFix by the https://github.com/RAELIE1/MegaCloudFix
+
 For **Firefox**, see [RAELIE1/MegaCloudFixFireFox](https://github.com/RAELIE1/MegaCloudFixFireFox).
